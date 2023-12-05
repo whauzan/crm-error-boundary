@@ -1,8 +1,12 @@
+"use client";
+
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function NotFound() {
+  const router = useRouter();
   return (
     <div className="h-[calc(100vh-72px)] px-20 py-24">
       <div className="flex h-full flex-col justify-center px-8">
@@ -19,7 +23,11 @@ export default function NotFound() {
           </h3>
         </div>
         <div className="mt-12 flex gap-x-3">
-          <Button variant={"outlined"} className="flex gap-x-3">
+          <Button
+            variant={"outlined"}
+            className="flex gap-x-3"
+            onClick={() => router.back()}
+          >
             <>
               <Image
                 src={"/chevron-left.svg"}
