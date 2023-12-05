@@ -12,11 +12,11 @@ const buttonVariants = cva(
         default: "rounded-lg bg-[#1570eF] text-lg font-semibold text-white",
         outlined:
           "border border-[#D0D5DD] bg-transparent text-lg font-semibold",
-        ghost: ""
+        ghost: "",
       },
       size: {
         default: "px-7 py-4",
-        sm: "px-4 py-2"
+        sm: "px-4 py-2",
       },
     },
     defaultVariants: {
