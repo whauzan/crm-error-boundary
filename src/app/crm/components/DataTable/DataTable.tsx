@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/Table";
 import DataTablePagination from "./DataTablePagination";
 import DataTableToolbar from "./DataTableToolbar";
+import Link from "next/link";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -98,15 +99,17 @@ const DataTable = <TData, TValue>({
               table.getRowModel().rows.map((row) => (
                 <TableRow
                   className="hover:bg-gray-100/70"
-                  key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  key={row.id}
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext(),
-                      )}
+                      <Link href={"/crm/clients"}>
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext(),
+                        )}
+                      </Link>
                     </TableCell>
                   ))}
                 </TableRow>
