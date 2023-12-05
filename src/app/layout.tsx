@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import Providers from "@/components/Providers";
+import Navbar from "@/components/Navbar/Navbar";
+import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Providers>{children}</Providers>
+      <body className={cn(inter.className, "relative")}>
+        <Providers>
+          <Navbar />
+          <div className="mt-[72px]">{children}</div>
+        </Providers>
       </body>
     </html>
   );
