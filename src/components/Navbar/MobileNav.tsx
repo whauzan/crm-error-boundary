@@ -1,4 +1,4 @@
-import { Bell, Menu, Settings } from "lucide-react";
+import { Bell, Menu, Search, Settings } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import UserNav from "./UserNav";
@@ -26,11 +26,13 @@ const MobileNav = () => {
               />
             </Link>
           </SheetHeader>
-          /Users/whauzan/Downloads/logo-small.ico
-          <Input
-            placeholder="Search"
-            className="mb-2 h-11 w-full rounded-lg md:w-[150px] lg:w-[250px]"
-          />
+          <div className="relative text-[#667085]">
+            <Search className="absolute left-[14px] top-1/2 -translate-y-1/2" />
+            <Input
+              placeholder="Search"
+              className="h-11 w-full rounded-lg pl-[44px] md:w-[150px] lg:w-[250px]"
+            />
+          </div>
           <div className="flex flex-col">
             {NavigationLinks.map((navigation) => (
               <Link

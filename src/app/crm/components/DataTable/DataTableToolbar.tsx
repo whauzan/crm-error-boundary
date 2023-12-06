@@ -4,7 +4,7 @@ import React from "react";
 import DataTableFacetedFilter from "./DataTableFacetedFilter";
 import { employmentStatus, genders, maritalStatus } from "@/constant";
 import { Button } from "@/components/ui/Button";
-import { X } from "lucide-react";
+import { Search, X } from "lucide-react";
 
 interface DataTableToolbarProps<TData> {
   table: Table<TData>;
@@ -15,16 +15,19 @@ const DataTableToolbar = <TData,>({ table }: DataTableToolbarProps<TData>) => {
   return (
     <div className="my-5 flex items-center justify-between">
       <div className="flex flex-1 flex-col space-x-5 space-y-5 md:flex-row md:items-center md:space-y-0">
-        <Input
-          placeholder="Search"
-          value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
-          onChange={(event) =>
-            table.getColumn("name")?.setFilterValue(event.target.value)
-          }
-          className="h-11 w-full rounded-lg md:w-[150px] lg:w-[250px]"
-        />
-        <div className="flex -translate-x-4 flex-col space-x-2 space-y-2  md:translate-x-0 md:flex-row md:items-center md:space-x-4">
-          <div className="flex items-center space-x-2">
+        <div className="relative text-[#667085]">
+          <Search className="absolute left-[14px] top-1/2 -translate-y-1/2" />
+          <Input
+            placeholder="Search"
+            value={(table.getColumn("name")?.getFilterValue() as string) ?? ""}
+            onChange={(event) =>
+              table.getColumn("name")?.setFilterValue(event.target.value)
+            }
+            className="h-11 w-full rounded-lg pl-[44px] md:w-[150px] lg:w-[250px]"
+          />
+        </div>
+        <div className="flex -translate-x-4 flex-col space-x-2 space-y-2 md:translate-x-0 md:flex-row md:items-center md:space-x-4 md:space-y-0">
+          <div className="flex items-center space-x-2 md:space-x-4">
             {table.getColumn("gender") && (
               <DataTableFacetedFilter
                 column={table.getColumn("gender")}
