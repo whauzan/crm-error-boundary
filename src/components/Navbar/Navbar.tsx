@@ -21,6 +21,7 @@ const Navbar = () => {
             width={100}
             height={100}
             className="h-8 w-36"
+            priority
           />
         </Link>
         <div className="flex gap-x-1">

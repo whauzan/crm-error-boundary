@@ -23,6 +23,7 @@ const MobileNav = () => {
                 width={100}
                 height={100}
                 className="h-8 w-36"
+                priority
               />
             </Link>
           </SheetHeader>
