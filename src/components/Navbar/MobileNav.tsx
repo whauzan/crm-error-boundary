@@ -1,4 +1,4 @@
-import { Bell, PanelLeftOpen, Settings } from "lucide-react";
+import { Bell, Menu, Settings } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import UserNav from "./UserNav";
@@ -12,7 +12,7 @@ const MobileNav = () => {
     <nav className="fixed left-0 top-0 z-10 flex h-[72px] w-full items-center justify-between border-b border-[#EAECF0] bg-white px-8 md:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <PanelLeftOpen />
+          <Menu />
         </SheetTrigger>
         <SheetContent side={"left"} className="text-[#344054]">
           <SheetHeader className="mb-3 -translate-x-1">
@@ -26,6 +26,7 @@ const MobileNav = () => {
               />
             </Link>
           </SheetHeader>
+          /Users/whauzan/Downloads/logo-small.ico
           <Input
             placeholder="Search"
             className="mb-2 h-11 w-full rounded-lg md:w-[150px] lg:w-[250px]"
