@@ -59,17 +59,17 @@ const UserNav = () => {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <User className="mr-2 h-4 w-4" />
             <span>View Profile</span>
             <DropdownMenuShortcut>⌘K→P</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <Settings className="mr-2 h-4 w-4" />
             <span>Settings</span>
             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <Zap className="mr-2 h-4 w-4" />
             <span>Keyboard shortcuts</span>
             <DropdownMenuShortcut>?</DropdownMenuShortcut>
@@ -77,17 +77,17 @@ const UserNav = () => {
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <Home className="mr-2 h-4 w-4" />
             <span>Company profile</span>
             <DropdownMenuShortcut>⌘K→C</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <Users className="mr-2 h-4 w-4" />
             <span>Team</span>
             <DropdownMenuShortcut>⌘K→T</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <UserRoundPlus className="mr-2 h-4 w-4" />
             <span>Invite colleagues</span>
             <DropdownMenuShortcut>⌘I</DropdownMenuShortcut>
@@ -95,29 +95,29 @@ const UserNav = () => {
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <Layers className="mr-2 h-4 w-4" />
             <span>Changelog</span>
             <DropdownMenuShortcut>⌘K→C</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <Slack className="mr-2 h-4 w-4" />
             <span>Slack Community</span>
             <DropdownMenuShortcut>⌘K→S</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <HelpCircle className="mr-2 h-4 w-4" />
             <span>Support</span>
             <DropdownMenuShortcut>⌘/</DropdownMenuShortcut>
           </DropdownMenuItem>
-          <DropdownMenuItem>
+          <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
             <Box className="mr-2 h-4 w-4" />
             <span>API</span>
             <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        <DropdownMenuItem className="cursor-pointer rounded-md hover:bg-gray-100/70">
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
           <DropdownMenuShortcut>⌥⇧Q</DropdownMenuShortcut>
