@@ -13,6 +13,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Acme Corp",
   description: "Customer Relationship Management App",
+  openGraph: {
+    images:
+      "https://cdn.discordapp.com/attachments/1058831007953981520/1181932987667992616/logo.png?ex=6582dbdf&is=657066df&hm=f6567e537933b9088f09a3b90e44345bed396ab48c60b8de9fc3ca08d0b20785&",
+  },
 };
 
 export default function RootLayout({
