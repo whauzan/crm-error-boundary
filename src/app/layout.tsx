@@ -5,6 +5,7 @@ import React from "react";
 import Providers from "@/components/Providers";
 import Navbar from "@/components/Navbar/Navbar";
 import { cn } from "@/lib/utils";
+import MobileNav from "@/components/Navbar/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={cn(inter.className, "relative")}>
         <Providers>
           <Navbar />
+          <MobileNav />
           <div className="mt-[72px]">{children}</div>
         </Providers>
       </body>

@@ -20,8 +20,8 @@ const DataTablePagination = <TData,>({
         onClick={() => table.previousPage()}
         disabled={!table.getCanPreviousPage()}
       >
-        <ArrowLeft className="mr-2 h-5 w-5" />
-        <span className="text-sm font-semibold">Previous</span>
+        <ArrowLeft className="h-5 w-5 md:mr-2" />
+        <span className="hidden text-sm font-semibold md:block">Previous</span>
         <span className="sr-only">Go to previous page</span>
       </Button>
       <div className="flex items-center gap-x-0.5">
@@ -34,9 +34,9 @@ const DataTablePagination = <TData,>({
         onClick={() => table.nextPage()}
         disabled={!table.getCanNextPage()}
       >
-        <span className="text-sm font-semibold">Next</span>
+        <span className="hidden text-sm font-semibold md:block">Next</span>
         <span className="sr-only">Go to previous page</span>
-        <ArrowRight className="ml-2 h-5 w-5" />
+        <ArrowRight className="h-5 w-5 md:ml-2" />
       </Button>
     </div>
   );

@@ -18,7 +18,7 @@ const Page = () => {
 
   if (isError) {
     return (
-      <div className="flex items-center justify-center px-28 pt-8">
+      <div className="flex items-center justify-center px-8 pt-8 lg:px-28">
         <div className="flex h-[475px] w-full flex-col items-center justify-center rounded-xl bg-[#FFE4E8]">
           <AlertTriangle className="h-6 w-6 text-[#C01148FF]" />
           <div className="mb-6 mt-4 text-center text-[#89123E]">
@@ -39,11 +39,11 @@ const Page = () => {
   }
 
   if (isLoading) {
-    return <p className="px-28 pt-8">Loading...</p>;
+    return <p className="px-8 pt-8 md:px-28">Loading...</p>;
   }
 
   return (
-    <main className="px-28 py-8">
+    <main className="p-8 lg:px-28">
       <div className="flex flex-col gap-y-8">
         <div>
           <h1 className="text-3xl font-semibold">
@@ -52,13 +52,13 @@ const Page = () => {
           <div className="mt-5 h-px bg-[#EAECF0]" />
         </div>
         <div className="rounded-xl bg-[#F9FAFB] px-6 py-5 text-[#475467]">
-          <div className="flex gap-x-14">
+          <div className="grid grid-cols-2 gap-y-3 md:flex md:gap-x-14">
             <div className="flex flex-col gap-y-2 text-sm font-medium">
-              <p>Gender</p>
+              <p className="text-base font-semibold">Gender</p>
               <p>{profileData?.clientInformation.gender}</p>
             </div>
             <div className="flex flex-col gap-y-2 text-sm font-medium">
-              <p>DOB</p>
+              <p className="text-base font-semibold">DOB</p>
               <p>
                 {
                   new Date(profileData?.clientInformation.dob!)
@@ -68,11 +68,11 @@ const Page = () => {
               </p>
             </div>
             <div className="flex flex-col gap-y-2 text-sm font-medium">
-              <p>Marital Status</p>
+              <p className="text-base font-semibold">Marital Status</p>
               <p>{profileData?.clientInformation.maritalStatus}</p>
             </div>
             <div className="flex flex-col gap-y-2 text-sm font-medium">
-              <p>Employment</p>
+              <p className="text-base font-semibold">Employment</p>
               <p>{profileData?.clientInformation.employmentStatus}</p>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Page = () => {
           <FinancialTable profileData={profileData!} />
           <h3 className="text-lg font-semibold">Goals</h3>
           <div className="my-5 h-px bg-[#EAECF0]" />
-          <div className="flex w-full justify-between gap-x-8">
+          <div className="grid w-full grid-cols-1 justify-between gap-x-3 gap-y-4 md:grid-cols-2 lg:gap-x-8">
             <Card
               title="Emergency Fund"
               price={profileData?.goals.emergencyFund!}
@@ -99,7 +99,7 @@ const Page = () => {
         <div>
           <h3 className="text-lg font-semibold">Insurances</h3>
           <div className="my-5 h-px bg-[#EAECF0]" />
-          <div className="flex w-full justify-between gap-x-8">
+          <div className="grid w-full grid-cols-1 justify-between gap-x-3 gap-y-4 md:grid-cols-2 lg:gap-x-8">
             <Card
               title="Life Insurance"
               price={profileData?.insurances.lifeInsurance!}

@@ -12,15 +12,17 @@ const Navbar = () => {
   const path = usePathname();
 
   return (
-    <nav className="fixed left-0 top-0 z-10 flex h-[72px] w-full items-center justify-between border-b border-[#EAECF0] bg-white px-28">
+    <nav className="fixed left-0 top-0 z-10 hidden h-[72px] w-full items-center justify-between border-b border-[#EAECF0] bg-white md:flex md:px-8 lg:px-28">
       <div className="flex items-center gap-x-4">
-        <Image
-          src={"/logo.png"}
-          alt="Logo"
-          width={100}
-          height={100}
-          className="h-8 w-36"
-        />
+        <Link href={"/"}>
+          <Image
+            src={"/logo.png"}
+            alt="Logo"
+            width={100}
+            height={100}
+            className="h-8 w-36"
+          />
+        </Link>
         <div className="flex gap-x-1">
           {NavigationLinks.map((navigation) => (
             <Link href={navigation.route} key={navigation.route}>

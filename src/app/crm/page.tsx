@@ -5,7 +5,7 @@ import SupportTabContent from "./components/TabContent/SupportTabContent";
 
 export default function Page() {
   return (
-    <main className="px-28 pt-8">
+    <main className="p-8 lg:px-28">
       <h2 className="text-3xl font-semibold">CRM</h2>
       <div className="my-5 h-px bg-[#EAECF0]" />
       <Tabs defaultValue="clients" className="h-full">
