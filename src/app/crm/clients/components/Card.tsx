@@ -19,11 +19,11 @@ const Card = ({ title, subtitle, price, ctaText }: CardProps) => {
         </Avatar>
         <div>
           <h3 className="font-semibold text-[#101828]">{title}</h3>
-          <div className="flex items-center text-sm font-normal text-[#475467]">
+          <div className="flex flex-col text-sm font-normal text-[#475467] md:flex-row md:items-center">
             {subtitle && (
               <>
                 <p>{subtitle}</p>
-                <span>﹒</span>
+                <span className="hidden md:block">﹒</span>
               </>
             )}
             <p>${price}</p>
